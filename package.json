@@ -25,7 +25,8 @@
     "react-dom": "^19",
     "sonner": "^1.4.0",
     "tailwind-merge": "^2.2.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "web-audio-beat-detector": "^8.2.21"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
