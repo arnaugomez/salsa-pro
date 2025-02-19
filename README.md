@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Salsa Dance Practice App 💃🕺
 
-## Getting Started
+A Next.js application to help users practice salsa dancing by detecting music tempo and providing random dance move prompts with audio instructions.
 
-First, run the development server:
+## Features
+
+- 🎵 Real-time music tempo detection using Web Audio API
+- 🔄 Random dance move prompts based on tempo
+- 🗣️ Audio instructions for each move
+- 👥 Single and couple dance modes
+- 🎚️ Multiple difficulty levels
+- 📱 Mobile-responsive design
+
+## Prerequisites
+
+- Node.js 18+ and npm
+- OpenAI API key (for generating audio instructions)
+
+## Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/salsa-pro.git
+cd salsa-pro
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Create a `.env.local` file in the root directory and add your OpenAI API key:
+
+```
+OPENAI_API_KEY=your_api_key_here
+```
+
+4. Generate audio instructions:
+
+```bash
+npm run generate-audio
+```
+
+5. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Select your dance mode (Single/Couple) and difficulty level (Easy/Medium/Hard).
+2. Click "Start Dancing" to begin.
+3. Play some salsa music (links to playlists are provided).
+4. Allow microphone access for tempo detection.
+5. Follow the dance move prompts that change according to the music tempo.
+6. Click "End Session" when you're done.
 
-## Learn More
+## Difficulty Levels
 
-To learn more about Next.js, take a look at the following resources:
+- Easy: Move changes every 32-48 beats
+- Medium: Move changes every 16-32 beats
+- Hard: Move changes every 8-16 beats
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Available Dance Moves
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Single Mode
 
-## Deploy on Vercel
+- Básico
+- Mambo
+- Lateral
+- Cruzado por atrás
+- Caminamos
+- Circula
+- Vuelta izquierda
+- Vuelta derecha
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Couple Mode
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Básico
+- Abajo con salsa
+- Aspirina
+
+## Tech Stack
+
+- Next.js 14+
+- React
+- TypeScript
+- shadcn/ui
+- Web Audio API
+- OpenAI Whisper API
+- Tailwind CSS
+
+## Contributing
+
+Feel free to submit issues and pull requests.
+
+## License
+
+MIT
