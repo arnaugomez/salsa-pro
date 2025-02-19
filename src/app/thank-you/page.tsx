@@ -3,7 +3,6 @@
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { Toaster } from "@/components/ui/toaster";
 
 export default function ThankYouPage() {
   const router = useRouter();
@@ -38,7 +37,6 @@ export default function ThankYouPage() {
           </Button>
         </div>
       </div>
-      <Toaster />
     </main>
   );
 }
