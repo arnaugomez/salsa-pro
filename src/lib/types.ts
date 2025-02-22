@@ -5,6 +5,7 @@ export interface DanceMove {
   name: string;
   mode: DanceMode;
   audioFile: string;
+  nextMoves: string[];
 }
 
 export interface DanceSession {
@@ -13,4 +14,4 @@ export interface DanceSession {
   currentMove?: DanceMove;
   isActive: boolean;
   tempo?: number;
-} 
+}
