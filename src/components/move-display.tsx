@@ -20,9 +20,7 @@ export function MoveDisplay({
 
   const getRandomMove = useCallback(() => {
     if (!currentMove) {
-      // If there's no current move, pick a random one from all available moves
-      const randomIndex = Math.floor(Math.random() * moves.length);
-      return moves[randomIndex];
+      return moves[0];
     }
 
     // Get the list of possible next moves based on the current move's nextMoves
