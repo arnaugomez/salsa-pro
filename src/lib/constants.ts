@@ -146,7 +146,7 @@ export const COUPLE_MOVES: DanceMove[] = [
     audioFile: "couple-basico.mp3",
     nextMoves: [
       "Básico",
-      "Caminando",
+      "Caminamos",
       "Caminamos hacia adelante y cambio de pareja",
       "Abajo con salsa",
       "Dile que no",
@@ -159,7 +159,7 @@ export const COUPLE_MOVES: DanceMove[] = [
     audioFile: "couple-abajo.mp3",
     nextMoves: [
       "Básico",
-      "Caminando",
+      "Caminamos",
       "Caminamos hacia adelante y cambio de pareja",
       "Abajo con salsa",
       "Aspirina",
@@ -173,7 +173,7 @@ export const COUPLE_MOVES: DanceMove[] = [
     audioFile: "couple-aspirina.mp3",
     nextMoves: [
       "Básico",
-      "Caminando",
+      "Caminamos",
       "Caminamos hacia adelante y cambio de pareja",
       "Abajo con salsa",
       "Dile que no",
@@ -186,7 +186,7 @@ export const COUPLE_MOVES: DanceMove[] = [
     audioFile: "couple-lateral.mp3",
     nextMoves: [
       "Básico",
-      "Caminando",
+      "Caminamos",
       "Caminamos hacia adelante y cambio de pareja",
       "Abajo con salsa",
       "Dile que no",
@@ -194,12 +194,12 @@ export const COUPLE_MOVES: DanceMove[] = [
     ],
   },
   {
-    name: "Caminando",
+    name: "Caminamos",
     mode: "couple",
-    audioFile: "couple-caminando.mp3",
+    audioFile: "couple-caminamos.mp3",
     nextMoves: [
       "Básico",
-      "Caminando",
+      "Caminamos",
       "Caminamos hacia adelante y cambio de pareja",
       "Abajo con salsa",
       "Dile que no",
@@ -224,7 +224,7 @@ export const COUPLE_MOVES: DanceMove[] = [
     audioFile: "couple-es-broma.mp3",
     nextMoves: [
       "Básico",
-      "Caminando",
+      "Caminamos",
       "Caminamos hacia adelante y cambio de pareja",
       "Abajo con salsa",
       "Dile que no",
@@ -255,7 +255,7 @@ export const COUPLE_MOVES: DanceMove[] = [
     audioFile: "couple-enxufla.mp3",
     nextMoves: [
       "Básico",
-      "Caminando",
+      "Caminamos",
       "Caminamos hacia adelante y cambio de pareja",
       "Abajo con salsa",
       "Dile que no",
@@ -268,7 +268,7 @@ export const COUPLE_MOVES: DanceMove[] = [
     audioFile: "couple-cero.mp3",
     nextMoves: [
       "Básico",
-      "Caminando",
+      "Caminamos",
       "Caminamos hacia adelante y cambio de pareja",
       "Abajo con salsa",
       "Dile que no",
