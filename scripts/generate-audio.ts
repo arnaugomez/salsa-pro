@@ -3,6 +3,12 @@ import path from "path";
 import OpenAI from "openai";
 import { SINGLE_MOVES, COUPLE_MOVES } from "../src/lib/constants";
 
+// Check for OpenAI API key
+if (!process.env.OPENAI_API_KEY) {
+  console.error("❌ OPENAI_API_KEY environment variable is required");
+  process.exit(1);
+}
+
 // Initialize OpenAI client
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -71,10 +77,5 @@ async function main() {
   console.log("🎉 Audio generation complete!");
 }
 
-// Check for OpenAI API key
-if (!process.env.OPENAI_API_KEY) {
-  console.error("❌ OPENAI_API_KEY environment variable is required");
-  process.exit(1);
-}
 
 main().catch(console.error);
