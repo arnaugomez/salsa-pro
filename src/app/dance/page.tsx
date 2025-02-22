@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { DanceMode, Difficulty, DanceMove } from "@/lib/types";
 import { MoveDisplay } from "@/components/move-display";
@@ -16,6 +16,7 @@ const TEMPO_VALUES: Record<TempoOption, number> = {
 export default function DancePage() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Get mode, difficulty and tempo from URL params
   const mode = (searchParams.get("mode") as DanceMode) || "single";
@@ -25,8 +26,15 @@ export default function DancePage() {
 
   // Handle move changes to play audio
   const handleMoveChange = useCallback((move: DanceMove) => {
-    const audio = new Audio(`/audio/${move.audioFile}`);
-    audio.play().catch(console.error);
+    // Stop previous audio if it's playing
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    
+    // Create and play new audio
+    audioRef.current = new Audio(`/audio/${move.audioFile}`);
+    audioRef.current.play().catch(console.error);
   }, []);
 
   // Handle end session

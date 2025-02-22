@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import { DanceMove } from "@/lib/types";
 import { SINGLE_MOVES, COUPLE_MOVES, DIFFICULTY_BEATS } from "@/lib/constants";
 
@@ -17,6 +17,7 @@ export function MoveDisplay({
 }: MoveDisplayProps) {
   const [currentMove, setCurrentMove] = useState<DanceMove | null>(null);
   const moves = mode === "single" ? SINGLE_MOVES : COUPLE_MOVES;
+  const effectRanRef = useRef(false);
 
   const getRandomMove = useCallback(() => {
     if (!currentMove) {
@@ -33,6 +34,10 @@ export function MoveDisplay({
   }, [moves, currentMove]);
 
   useEffect(() => {
+    // Guard against double execution in strict mode
+    if (effectRanRef.current) return;
+    effectRanRef.current = true;
+
     if (!tempo) return;
 
     // Function to calculate random interval
@@ -63,7 +68,10 @@ export function MoveDisplay({
 
     scheduleNextMove(); // Start the cycle
 
-    return () => clearTimeout(timeoutId);
+    return () => {
+      clearTimeout(timeoutId);
+      effectRanRef.current = false;
+    };
   }, [tempo, difficulty, mode, onMoveChange, getRandomMove]);
 
   if (!currentMove) {
