@@ -14,6 +14,12 @@ async function generateAudio(
   mode: string,
   outputPath: string
 ) {
+  // Skip if file already exists
+  if (fs.existsSync(outputPath)) {
+    console.log(`⏭️ Skipping existing audio for ${mode} - ${moveName}`);
+    return;
+  }
+
   try {
     const prompt = `¡${moveName}!`;
 
