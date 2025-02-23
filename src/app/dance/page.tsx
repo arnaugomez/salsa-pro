@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { DanceMode, Difficulty, DanceMove } from "@/lib/types";
 import { MoveDisplay } from "@/components/move-display";
@@ -14,6 +14,24 @@ const TEMPO_VALUES: Record<TempoOption, number> = {
 };
 
 export default function DancePage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="min-h-screen bg-gradient-to-br from-pink-100 to-rose-100 p-8">
+          <div className="max-w-2xl mx-auto space-y-12">
+            <div className="text-center">
+              <p className="text-gray-600">Cargando...</p>
+            </div>
+          </div>
+        </main>
+      }
+    >
+      <DancePageContent />
+    </Suspense>
+  );
+}
+
+function DancePageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -31,7 +49,7 @@ export default function DancePage() {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
-    
+
     // Create and play new audio
     audioRef.current = new Audio(`/audio/${move.audioFile}`);
     audioRef.current.play().catch(console.error);
