@@ -15,15 +15,11 @@ export function MoveDisplay({
   tempo,
   onMoveChange,
 }: MoveDisplayProps) {
-  const [currentMove, setCurrentMove] = useState<DanceMove | null>(null);
   const moves = mode === "single" ? SINGLE_MOVES : COUPLE_MOVES;
+  const [currentMove, setCurrentMove] = useState<DanceMove>(moves[0]);
   const effectRanRef = useRef(false);
 
   const getRandomMove = useCallback(() => {
-    if (!currentMove) {
-      return moves[0];
-    }
-
     // Get the list of possible next moves based on the current move's nextMoves
     const possibleNextMoves = moves.filter((move) =>
       currentMove.nextMoves.includes(move.name)
@@ -48,10 +44,6 @@ export function MoveDisplay({
       return randomBeats * msPerBeat;
     };
 
-    // Set initial move and interval
-    const initialMove = getRandomMove();
-    setCurrentMove(initialMove);
-    onMoveChange?.(initialMove);
     let timeoutId: NodeJS.Timeout;
 
     const scheduleNextMove = () => {
