@@ -283,7 +283,7 @@ export const DIFFICULTY_BEATS: Record<
 > = {
   easy: { min: 6, max: 12 },
   medium: { min: 4, max: 10 },
-  hard: { min: 2, max: 8 },
+  hard: { min: 4, max: 8 },
 };
 
 export const EXAMPLE_PLAYLISTS = {
