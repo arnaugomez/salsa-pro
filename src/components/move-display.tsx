@@ -77,7 +77,7 @@ export function MoveDisplay({
   if (!currentMove) {
     return (
       <div className="text-center p-8">
-        <p className="text-gray-600">Waiting for tempo detection...</p>
+        <p className="text-gray-600">Esperando la detección del tempo...</p>
       </div>
     );
   }

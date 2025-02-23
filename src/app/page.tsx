@@ -23,9 +23,11 @@ export default function WelcomePage() {
     <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 to-rose-100">
       <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-xl">
         <div className="text-center space-y-2">
-          <h1 className="text-3xl font-bold text-gray-900">Salsa Practice</h1>
+          <h1 className="text-3xl font-bold text-gray-900">
+            Práctica de Salsa
+          </h1>
           <p className="text-gray-600">
-            Select your dance mode, difficulty and tempo to begin
+            Selecciona tu modo de baile, dificultad y tempo para comenzar
           </p>
         </div>
 
@@ -42,14 +44,14 @@ export default function WelcomePage() {
               onChange={(e) => setTempo(e.target.value as TempoOption)}
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
             >
-              <option value="slow">Slow (60 BPM)</option>
-              <option value="medium">Medium (100 BPM)</option>
-              <option value="fast">Fast (120 BPM)</option>
+              <option value="slow">Lento (60 BPM)</option>
+              <option value="medium">Medio (100 BPM)</option>
+              <option value="fast">Rápido (120 BPM)</option>
             </select>
           </div>
 
           <Button onClick={handleStart} className="w-full" size="lg">
-            Start Dancing
+            Empezar a Bailar
           </Button>
         </div>
       </div>

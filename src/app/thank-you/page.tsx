@@ -11,8 +11,8 @@ export default function ThankYouPage() {
   const handleShare = async () => {
     await navigator.clipboard.writeText(window.location.origin);
     toast({
-      title: "Link Copied!",
-      description: "Share this link with your dance partners.",
+      title: "¡Enlace Copiado!",
+      description: "Comparte este enlace con tus compañeros de baile.",
     });
   };
 
@@ -21,19 +21,19 @@ export default function ThankYouPage() {
       <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-xl text-center">
         <div className="space-y-4">
           <h1 className="text-3xl font-bold text-gray-900">
-            Great Dancing! 🎉
+            ¡Excelente baile! 🎉
           </h1>
           <p className="text-gray-600">
-            You&apos;ve completed your salsa practice session.
+            Has completado tu sesión de práctica de salsa.
           </p>
         </div>
 
         <div className="space-y-4">
           <Button onClick={handleShare} variant="outline" className="w-full">
-            Share with Friends
+            Compartir con amigos
           </Button>
           <Button onClick={() => router.push("/")} className="w-full">
-            Dance Again
+            Bailar de nuevo
           </Button>
         </div>
       </div>

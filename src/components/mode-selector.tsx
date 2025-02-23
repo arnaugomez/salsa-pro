@@ -10,7 +10,7 @@ interface ModeSelectorProps {
 export function ModeSelector({ value, onChange }: ModeSelectorProps) {
   return (
     <div className="space-y-3">
-      <Label className="text-lg font-semibold">Dance Mode</Label>
+      <Label className="text-lg font-semibold">Modo de Baile</Label>
       <RadioGroup
         value={value}
         onValueChange={onChange as (value: string) => void}
@@ -18,11 +18,11 @@ export function ModeSelector({ value, onChange }: ModeSelectorProps) {
       >
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="single" id="single" />
-          <Label htmlFor="single">Single</Label>
+          <Label htmlFor="single">Individual</Label>
         </div>
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="couple" id="couple" />
-          <Label htmlFor="couple">Couple</Label>
+          <Label htmlFor="couple">Pareja</Label>
         </div>
       </RadioGroup>
     </div>

@@ -53,7 +53,7 @@ export default function DancePage() {
         />
         <div className="text-center">
           <Button variant="destructive" size="lg" onClick={handleEndSession}>
-            End Session
+            Finalizar sesión
           </Button>
         </div>
       </div>
