@@ -6,6 +6,7 @@ import { DanceMode, Difficulty } from "@/lib/types";
 import { ModeSelector } from "@/components/mode-selector";
 import { DifficultySelector } from "@/components/difficulty-selector";
 import { Button } from "@/components/ui/button";
+import { MusicPrompt } from "@/components/music-prompt";
 
 export type TempoOption = "slow" | "medium" | "fast";
 
@@ -35,9 +36,12 @@ export default function WelcomePage() {
           <ModeSelector value={mode} onChange={setMode} />
           <DifficultySelector value={difficulty} onChange={setDifficulty} />
 
-          <Button onClick={handleStart} className="w-full" size="lg">
-            Empezar a Bailar
-          </Button>
+          <div className="space-y-6">
+            <MusicPrompt />
+            <Button onClick={handleStart} className="w-full" size="lg">
+              Empezar a Bailar
+            </Button>
+          </div>
         </div>
       </div>
     </main>
