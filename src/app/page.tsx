@@ -27,7 +27,7 @@ export default function WelcomePage() {
             Práctica de Salsa
           </h1>
           <p className="text-gray-600">
-            Selecciona tu modo de baile, dificultad y tempo para comenzar
+            Selecciona tu modo de baile y dificultad para comenzar
           </p>
         </div>
 
