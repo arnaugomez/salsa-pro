@@ -13,7 +13,7 @@ export type TempoOption = "slow" | "medium" | "fast";
 export default function WelcomePage() {
   const router = useRouter();
   const [mode, setMode] = useState<DanceMode>("single");
-  const [difficulty, setDifficulty] = useState<Difficulty>("easy");
+  const [difficulty, setDifficulty] = useState<Difficulty>("medium");
   const [tempo] = useState<TempoOption>("slow");
 
   const handleStart = () => {
@@ -41,6 +41,9 @@ export default function WelcomePage() {
             <Button onClick={handleStart} className="w-full" size="lg">
               Empezar a Bailar
             </Button>
+            <p className="text-sm text-gray-600 text-center">
+              Versión beta, no funciona el audio en iPhone
+            </p>
           </div>
         </div>
       </div>

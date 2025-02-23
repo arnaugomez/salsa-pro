@@ -6,7 +6,6 @@ export const SINGLE_MOVES: DanceMove[] = [
     mode: "single",
     audioFile: "single-basico.mp3",
     nextMoves: [
-      "Básico",
       "Mambo",
       "Lateral",
       "Cruzado por atrás",
@@ -22,7 +21,6 @@ export const SINGLE_MOVES: DanceMove[] = [
     audioFile: "single-mambo.mp3",
     nextMoves: [
       "Básico",
-      "Mambo",
       "Lateral",
       "Cruzado por atrás",
       "Circula",
@@ -38,7 +36,6 @@ export const SINGLE_MOVES: DanceMove[] = [
     nextMoves: [
       "Básico",
       "Mambo",
-      "Lateral",
       "Cruzado por atrás",
       "Circula",
       "Vuelta izquierda",
@@ -54,7 +51,6 @@ export const SINGLE_MOVES: DanceMove[] = [
       "Básico",
       "Mambo",
       "Lateral",
-      "Cruzado por atrás",
       "Caminamos",
       "Circula",
       "Vuelta izquierda",
@@ -86,7 +82,6 @@ export const SINGLE_MOVES: DanceMove[] = [
       "Mambo",
       "Lateral",
       "Cruzado por atrás",
-      "Circula",
       "Vuelta izquierda",
       "Vuelta derecha",
       "Un fly",
@@ -102,7 +97,6 @@ export const SINGLE_MOVES: DanceMove[] = [
       "Lateral",
       "Cruzado por atrás",
       "Circula",
-      "Vuelta izquierda",
       "Vuelta derecha",
       "Un fly",
     ],
@@ -118,7 +112,6 @@ export const SINGLE_MOVES: DanceMove[] = [
       "Cruzado por atrás",
       "Circula",
       "Vuelta izquierda",
-      "Vuelta derecha",
       "Un fly",
     ],
   },
@@ -134,7 +127,6 @@ export const SINGLE_MOVES: DanceMove[] = [
       "Circula",
       "Vuelta izquierda",
       "Vuelta derecha",
-      "Un fly",
     ],
   },
 ];
@@ -145,7 +137,6 @@ export const COUPLE_MOVES: DanceMove[] = [
     mode: "couple",
     audioFile: "couple-basico.mp3",
     nextMoves: [
-      "Básico",
       "Caminamos",
       "Caminamos hacia adelante y cambio de pareja",
       "Abajo con salsa",
@@ -161,7 +152,6 @@ export const COUPLE_MOVES: DanceMove[] = [
       "Básico",
       "Caminamos",
       "Caminamos hacia adelante y cambio de pareja",
-      "Abajo con salsa",
       "Aspirina",
       "Dile que no",
       "Lateral",
@@ -190,7 +180,6 @@ export const COUPLE_MOVES: DanceMove[] = [
       "Caminamos hacia adelante y cambio de pareja",
       "Abajo con salsa",
       "Dile que no",
-      "Lateral",
     ],
   },
   {
@@ -199,7 +188,6 @@ export const COUPLE_MOVES: DanceMove[] = [
     audioFile: "couple-caminamos.mp3",
     nextMoves: [
       "Básico",
-      "Caminamos",
       "Caminamos hacia adelante y cambio de pareja",
       "Abajo con salsa",
       "Dile que no",
@@ -241,13 +229,13 @@ export const COUPLE_MOVES: DanceMove[] = [
     name: "Base cubana",
     mode: "couple",
     audioFile: "couple-base-cubana.mp3",
-    nextMoves: ["Base cubana", "Un fly", "Enxufla", "Cero"],
+    nextMoves: ["Un fly", "Enxufla", "Cero"],
   },
   {
     name: "Un fly",
     mode: "couple",
     audioFile: "couple-un-fly.mp3",
-    nextMoves: ["Base cubana", "Un fly", "Enxufla", "Cero"],
+    nextMoves: ["Base cubana", "Enxufla", "Cero"],
   },
   {
     name: "Enxufla",

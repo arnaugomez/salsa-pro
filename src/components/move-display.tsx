@@ -53,7 +53,6 @@ export function MoveDisplay({
       timeoutId = setTimeout(() => {
         const newMove = getRandomMove();
         setCurrentMove(newMove);
-        onMoveChange?.(newMove);
         scheduleNextMove(); // Schedule next move with a new random interval
       }, interval);
     };
@@ -64,7 +63,19 @@ export function MoveDisplay({
       clearTimeout(timeoutId);
       effectRanRef.current = false;
     };
-  }, [tempo, difficulty, mode, onMoveChange, getRandomMove]);
+  }, [tempo, difficulty, mode, getRandomMove]);
+
+  const effect2RanRef = useRef(false);
+
+  useEffect(() => {
+    if (effect2RanRef.current) return;
+    effect2RanRef.current = true;
+
+    onMoveChange?.(currentMove);
+    return () => {
+      effect2RanRef.current = false;
+    };
+  }, [currentMove, onMoveChange]);
 
   if (!currentMove) {
     return (
