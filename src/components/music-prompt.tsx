@@ -10,7 +10,7 @@ export function MusicPrompt() {
         <Button
           variant="outline"
           onClick={() =>
-            window.open("https://www.youtube.com/watch?v=XuJ6_NMRE6M", "_blank")
+            window.open("https://www.youtube.com/watch?v=0Xg7jYzQd7g", "_blank")
           }
         >
           Playlist de Salsa
